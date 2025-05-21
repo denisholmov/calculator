@@ -1,12 +1,12 @@
 // Здесь описываем логику калькулятора
 
-import { sum, multiply, substract } from './math.js';
+import { sum, multiply, substract, division } from './math.js';
 
 const OPERATIONS = {
   sum: '+',
   substract: '-',
   multiply: '*',
-  divison: '/',
+  division: '/',
 }; // Описали доступные операции
 
 export const calculate = ({ a, b, operation }) => {
@@ -25,8 +25,8 @@ export const calculate = ({ a, b, operation }) => {
       result = multiply(a, b);
       break;
 
-    case OPERATIONS.divison:
-      result = divison(a, b);
+    case OPERATIONS.division:
+      result = division(a, b);
       break;
 
     default:
